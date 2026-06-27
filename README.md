@@ -25,7 +25,7 @@
     .page {
       position: relative;
       width: 100%;
-      min-height: 100vh;
+      min-height: 100dvh;
       overflow: hidden;
     }
 
@@ -63,7 +63,7 @@
 
     .bookshelf {
       width: 100%;
-      height: 100vh;
+      height: 100dvh;
       object-fit: cover;
       display: block;
     }
