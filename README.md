@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="de-CH">
 <head>
   <meta charset="UTF-8" />
@@ -16,24 +17,19 @@
     }
 
     body {
-      margin: 0;
+      font-family: 'Nunito', sans-serif;
       background: #101014;
-      overflow: hidden;
+      overflow-x: hidden;
+      color: white;
     }
-    
+
     .page {
       position: relative;
-      width: 100vw;
-      height: 100dvh;
+      width: 100dvh;
+      min-height: 100%;
       overflow: hidden;
     }
-    
-    .bookshelf {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
+
     .hero-title {
       position: absolute;
       top: 18px;
@@ -64,6 +60,13 @@
       margin-top: 4px;
       font-size: 0.92rem;
       opacity: 0.8;
+    }
+
+    .bookshelf {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .star {
@@ -98,7 +101,7 @@
       align-items: center;
       justify-content: center;
       font-size: 16px;
-      color: yellow;
+      color: white;
     }
 
     .star:hover {
@@ -387,7 +390,6 @@
     <div class="star"
          style="top: 88%; left: 15%;"
          onclick="openBook(9)"></div>
-         
 
 
     <div class="hint">
@@ -450,27 +452,7 @@
 
   </div>
 
-  <script>
-  function scalePage() {
-    const page = document.querySelector('.page');
-  
-    const designWidth = 5830;
-    const designHeight = 6310;
-  
-    const scaleX = window.innerWidth / designWidth;
-    const scaleY = window.innerHeight / designHeight;
-  
-    const scale = Math.min(scaleX, scaleY);
-  
-    page.style.transform = `scale(${scale})`;
-  
-    // immer oben links starten
-    window.scrollTo(0, 0);
-  }
-  
-  window.addEventListener('resize', scalePage);
-  scalePage();
-  </script>
+
   <script>
 
     const books = [
@@ -481,7 +463,7 @@
         lik: "LIK00461077X",
         location: "Witziges",
         description: "Jule stolpert von einem Chaos ins nächste – und genau das macht das Buch so lustig. Zwischen verrückten Ideen, peinlichen Situationen und tierischem Durcheinander wird es nie langweilig. Perfekt für Fans von witzigen Geschichten mit viel Tempo.",
-        image: "Jule Bambule.jpg",
+        image: "Covers/Jule Bambule.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=61069ffc-a343-4ec1-afb4-41d0901589f1"
       },
 
@@ -492,7 +474,7 @@
         lik: "LIK004850291",
         location: "Witziges",
         description: "Billie versucht, das Chaos ihres Alltags zu überleben – was gar nicht so einfach ist. Schule, Familie und peinliche Situationen sorgen ständig für neue Katastrophen. Locker, modern und extrem lustig geschrieben.",
-        image: "O.M.G. Billie.jpg",
+        image: "Covers/O.M.G. Billie.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=f48fbf55-3e5b-4b8e-9a8e-6cdd93558101"
       },
 
@@ -503,7 +485,7 @@
         lik: "LIK00422574X",
         location: "Witziges",
         description: "Nikki schreibt über ihren komplett verrückten Schulalltag. Zwischen Drama, Crushes und peinlichen Momenten entstehen superwitzige Tagebucheinträge mit vielen Zeichnungen. Ideal für Fans von Gregs Tagebuch.",
-        image: "DORK Diaries.jpg",
+        image: "Covers/DORK Diaries.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=4bdf8ff1-4c80-4e5d-83b5-86404c2d4368"
       },
 
@@ -514,7 +496,7 @@
         lik: "LIK004558497",
         location: "Witziges",
         description: "Penny liebt Detektivfälle und steckt ihre Nase überall hinein. Zusammen mit ihren Freunden löst sie spannende Rätsel und gerät dabei oft in Schwierigkeiten. Witzig, clever und voller Überraschungen.",
-        image: "Penny Pepper.jpg",
+        image: "Covers/Penny Pepper.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=926f5b03-8d76-4c33-bbf4-2a0465048f96"
       },
 
@@ -525,7 +507,7 @@
         lik: "LIK004609951",
         location: "Witziges",
         description: "Lotta erzählt von ihrem total verrückten Alltag mit Familie, Schule und jeder Menge Missverständnissen. Die lustigen Zeichnungen machen das Lesen besonders leicht. Charmant, chaotisch und mega unterhaltsam.",
-        image: "Lotta-Leben.jpg",
+        image: "Covers/Lotta-Leben.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=f74e0edc-609e-4aba-b6f9-78aa616512a6"
       },
 
@@ -536,7 +518,7 @@
         lik: "LIK004007045",
         location: "Witziges",
         description: "Tom zeichnet lieber Comics, als Hausaufgaben zu machen. Sein Leben besteht aus Musik, Snacks und ziemlich viel Chaos. Die vielen Kritzeleien und Witze machen das Buch supercool.",
-        image: "Tom Gates.jpg",
+        image: "Covers/Tom Gates.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=ca05449f-5464-4834-9438-2ae2f9c1dc56"
       },
 
@@ -547,7 +529,7 @@
         lik: "LIK004704488",
         location: "Witziges",
         description: "Nick steckt dauernd in lustigen oder peinlichen Situationen. Schule, Freunde und Lehrer sorgen für nonstop Ärger und jede Menge Lacher. Comicstil und kurze Kapitel machen das Buch extrem angenehm zu lesen.",
-        image: "Super Nick.jpg",
+        image: "Covers/Super Nick.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=53812431-1a2a-4e67-a525-4e218ca6c148"
       },
 
@@ -558,7 +540,7 @@
         lik: "LIK004829320",
         location: "Witziges",
         description: "Zwei Freunde verwandeln ihren strengen Direktor aus Versehen in einen Superhelden mit Unterhose und Umhang. Komplett verrückt, überdreht und voller Comic-Humor. Perfekt für alle, die absurde Geschichten lieben.",
-        image: "Captain Underpants.jpg",
+        image: "Covers/Captain Underpants.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=72b55683-f5b8-4558-9c20-c61d44d57e4d"
       },
 
@@ -569,7 +551,7 @@
         lik: "LIK004881151",
         location: "Witziges",
         description: "Schon am Montag läuft einfach alles schief. Von peinlichen Momenten bis zu total verrückten Katastrophen wird die Woche immer schlimmer. Schnell, witzig und voller Comiczeichnungen.",
-        image: "Worst week ever.jpg",
+        image: "Covers/Worst week ever.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=3602e40c-e80e-462b-8cb7-2b74ba97184f"
       },
 
@@ -580,7 +562,7 @@
         lik: "LIK004984777",
         location: "Witziges",
         description: "Leon hat zwar selten einen Plan, aber irgendwie landet er trotzdem mitten im Abenteuer. Seine Ideen führen oft zu totalem Chaos – und genau das macht Spass. Locker geschrieben und perfekt für Wenigleser:innen.",
-        image: "Leon Mücke.jpg",
+        image: "Covers/Leon Mücke.jpg",
         link: "https://katalog.kbl.ch/results?p_r_p_arena_urn%3Aarena_search_item_id=18213eaf-b0cc-4857-a2eb-e80ffb5f1601"
       }
     ];
