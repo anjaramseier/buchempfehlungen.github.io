@@ -28,8 +28,8 @@
     .page {
       position: relative;
     
-      width: 1440px;   /* Originalbreite deines Bildes */
-      height: 2560px;  /* Originalhöhe deines Bildes */
+      width: 5860px;   /* Originalbreite deines Bildes */
+      height: 6310px;  /* Originalhöhe deines Bildes */
     
       transform-origin: top center;
     }
