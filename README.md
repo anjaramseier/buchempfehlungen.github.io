@@ -104,7 +104,7 @@
       align-items: center;
       justify-content: center;
       font-size: 16px;
-      color: white;
+      color: yellow;
     }
 
     .star:hover {
