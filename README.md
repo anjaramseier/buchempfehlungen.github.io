@@ -64,8 +64,12 @@
     .bookshelf {
       width: 100%;
       height: 100dvh;
-      object-fit: cover;
+    
+      object-fit: contain;
+      object-position: center top;
+    
       display: block;
+      background: #101014;
     }
 
     .star {
