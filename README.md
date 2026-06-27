@@ -19,19 +19,17 @@
       margin: 0;
       background: #101014;
       overflow: hidden;
-    
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
     }
     
     .page {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
     
       width: 5860px;   /* Originalbreite deines Bildes */
       height: 6310px;  /* Originalhöhe deines Bildes */
     
-      transform-origin: top center;
+      transform-origin: top left;
     }
     
     .bookshelf {
@@ -456,19 +454,25 @@
   </div>
 
   <script>
-    function scalePage() {
-      const page = document.querySelector('.page');
-    
-      const scaleX = window.innerWidth / 5860;
-      const scaleY = window.innerHeight / 6310;
-    
-      const scale = Math.min(scaleX, scaleY);
-    
-      page.style.transform = `scale(${scale})`;
-    }
-    
-    window.addEventListener('resize', scalePage);
-    scalePage();
+  function scalePage() {
+    const page = document.querySelector('.page');
+  
+    const designWidth = 5830;
+    const designHeight = 6310;
+  
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+  
+    const scale = Math.min(scaleX, scaleY);
+  
+    page.style.transform = `scale(${scale})`;
+  
+    // immer oben links starten
+    window.scrollTo(0, 0);
+  }
+  
+  window.addEventListener('resize', scalePage);
+  scalePage();
   </script>
   <script>
 
