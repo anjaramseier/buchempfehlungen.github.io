@@ -16,17 +16,28 @@
     }
 
     body {
-      font-family: 'Nunito', sans-serif;
+      margin: 0;
       background: #101014;
-      overflow-x: hidden;
-      color: white;
+      overflow: hidden;
+    
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
-
+    
     .page {
       position: relative;
+    
+      width: 1440px;   /* Originalbreite deines Bildes */
+      height: 2560px;  /* Originalhöhe deines Bildes */
+    
+      transform-origin: top center;
+    }
+    
+    .bookshelf {
       width: 100%;
-      min-height: 100dvh;
-      overflow: hidden;
+      height: 100%;
+      display: block;
     }
 
     .hero-title {
@@ -59,17 +70,6 @@
       margin-top: 4px;
       font-size: 0.92rem;
       opacity: 0.8;
-    }
-
-    .bookshelf {
-      width: 100%;
-      height: 100dvh;
-    
-      object-fit: contain;
-      object-position: center top;
-    
-      display: block;
-      background: #101014;
     }
 
     .star {
@@ -455,7 +455,21 @@
 
   </div>
 
-
+  <script>
+    function scalePage() {
+      const page = document.querySelector('.page');
+    
+      const scaleX = window.innerWidth / 1440;
+      const scaleY = window.innerHeight / 2560;
+    
+      const scale = Math.min(scaleX, scaleY);
+    
+      page.style.transform = `scale(${scale})`;
+    }
+    
+    window.addEventListener('resize', scalePage);
+    scalePage();
+  </script>
   <script>
 
     const books = [
