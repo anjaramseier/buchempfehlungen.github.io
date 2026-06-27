@@ -459,8 +459,8 @@
     function scalePage() {
       const page = document.querySelector('.page');
     
-      const scaleX = window.innerWidth / 1440;
-      const scaleY = window.innerHeight / 2560;
+      const scaleX = window.innerWidth / 5860;
+      const scaleY = window.innerHeight / 6310;
     
       const scale = Math.min(scaleX, scaleY);
     
