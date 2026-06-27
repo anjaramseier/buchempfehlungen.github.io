@@ -706,31 +706,3 @@
 
 </body>
 </html>
-
----
-
-## Sterne verschieben
-
-Die Positionen steuerst du hier:
-
-```html
-style="top: 30%; left: 18%;"
-```
-
-Damit platzierst du die Sterne exakt dort, wo die Bücher im Regal stehen.
-
----
-
-# Gratis veröffentlichen (empfohlen)
-
-## GitHub Pages
-
-Am einfachsten und gratis.
-
-1. GitHub-Konto erstellen
-2. neues Repository erstellen
-3. `index.html` hochladen
-4. unter Settings → Pages aktivieren
-5. fertig
-
-Dann erhältst du eine öffentliche URL.
