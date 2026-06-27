@@ -22,22 +22,18 @@
     }
     
     .page {
-      position: absolute;
-      top: 0;
-      left: 0;
-    
-      width: 5860px;   /* Originalbreite deines Bildes */
-      height: 6310px;  /* Originalhöhe deines Bildes */
-    
-      transform-origin: top left;
+      position: relative;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
     }
     
     .bookshelf {
       width: 100%;
       height: 100%;
+      object-fit: contain;
       display: block;
     }
-
     .hero-title {
       position: absolute;
       top: 18px;
@@ -391,6 +387,7 @@
     <div class="star"
          style="top: 88%; left: 15%;"
          onclick="openBook(9)"></div>
+         
 
 
     <div class="hint">
